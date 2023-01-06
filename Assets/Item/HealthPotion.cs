@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class HealthPotion : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int _healvalue;
 
-    // Update is called once per frame
-    void Update()
+    public override void OnItemPickup(GameObject player)
     {
-        
+        player.GetComponent<EntityHealth>().Heal(_healvalue);
+        Debug.Log("picked up health potion");
+        Destroy(this.gameObject);
     }
 }
