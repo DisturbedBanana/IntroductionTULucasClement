@@ -28,6 +28,7 @@ public class HealthUI : MonoBehaviour
 
     void UpdateSlider(int newHealthValue)
     {
+        _slider.maxValue = _entityHealth.GetMaxHealth();
         _slider.value = newHealthValue;
         _text.text = $"{newHealthValue} / {_entityHealth.GetMaxHealth()}";
     }

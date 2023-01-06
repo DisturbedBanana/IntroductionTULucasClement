@@ -39,6 +39,12 @@ public class EntityHealth : MonoBehaviour
         HealthChanged.Invoke(_currentHealth);
     }
 
+    public void MaxHPUp()
+    {
+        _maxHealth += 20;
+        HealthChanged.Invoke(_currentHealth);
+    }
+
     public void TakeDamage(int v)
     {
         _currentHealth -= v;

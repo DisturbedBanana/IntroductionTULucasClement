@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PowerUp : Item
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnItemPickup(GameObject player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        player.GetComponent<EntityHealth>().MaxHPUp();
+        Destroy(this.gameObject);
     }
 }
