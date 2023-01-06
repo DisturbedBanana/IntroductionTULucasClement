@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Gold : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int _goldValue;
 
-    // Update is called once per frame
-    void Update()
+    public override void OnItemPickup(GameObject player)
     {
-        
+        Debug.Log("itempickup");
+        player.GetComponent<EntityGold>().AddGold(_goldValue);
+        Destroy(this.gameObject);
     }
 }

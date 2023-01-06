@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class EntityGold : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] int _totalGold = 0;
+
+    public event Action<int> GoldAdded;
+
+    private void Start()
     {
-        
+        _totalGold = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddGold(int goldToAdd)
     {
-        
+        _totalGold += goldToAdd;
+        GoldAdded.Invoke(_totalGold);
     }
 }

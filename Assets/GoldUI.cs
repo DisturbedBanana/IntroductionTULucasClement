@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using TMPro;
 
 public class GoldUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] EntityGold _entityGold;
+
+    TextMeshProUGUI _goldText;
+
+    
     void Start()
     {
-        
+        _entityGold.GoldAdded += UpdateGoldUI;
+        _goldText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        _entityGold.GoldAdded -= UpdateGoldUI;
+    }
+
+    void UpdateGoldUI(int goldToDisplay)
+    {
+        _goldText.text = "Gold: " + goldToDisplay.ToString();
+        Debug.Log("GoldUI Update");
     }
 }

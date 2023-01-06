@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            OnItemPickup(collision.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void OnItemPickup(GameObject player)
     {
-        
+        Debug.Log("Item picked up");
     }
 }
