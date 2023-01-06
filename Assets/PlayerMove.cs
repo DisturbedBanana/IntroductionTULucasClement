@@ -89,13 +89,11 @@ public class PlayerMove : MonoBehaviour
     private void UpdateMove(InputAction.CallbackContext obj)
     {
         JoystickDirection = obj.ReadValue<Vector2>();
-        Debug.Log($"Update Move : {obj.ReadValue<Vector2>()}");
     }
     private void StopMove(InputAction.CallbackContext obj)
     {
         StopCoroutine(MovementRoutine);
         JoystickDirection = Vector2.zero;
-        Debug.Log($"Stop Move : {obj.ReadValue<Vector2>()}");
     }
 
 

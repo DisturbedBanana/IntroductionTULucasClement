@@ -232,9 +232,9 @@ GameObject:
   - component: {fileID: 58043775}
   - component: {fileID: 58043778}
   - component: {fileID: 58043777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DangerZone
-  m_TagString: Untagged
+  m_TagString: DmgZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +251,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 7.07, y: 0, z: 3.49}
 --- !u!4 &58043776
 Transform:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 261620510}
   - component: {fileID: 261620512}
   - component: {fileID: 261620511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 17
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -983,6 +983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item_PowerUp
       objectReference: {fileID: 0}
+    - target: {fileID: 97553736113787567, guid: 8cbcc73477c16c545804b189e6229774,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cbcc73477c16c545804b189e6229774, type: 3}
 --- !u!4 &599547464 stripped
@@ -1118,9 +1123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c05c0356b7ba26448579eaf49a2408b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _entityHealth: {fileID: 0}
+  _entityHealth: {fileID: 1349007869}
   _slider: {fileID: 1044316936}
-  _text: {fileID: 0}
+  _text: {fileID: 1680877072}
   _playerHealth: {fileID: 1349007869}
 --- !u!1 &728913436
 GameObject:
@@ -1808,6 +1813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792663629}
     m_Modifications:
+    - target: {fileID: 4441928871813012542, guid: df17769e7a3d8134d8ac027e1df9461e,
+        type: 3}
+      propertyPath: _goldValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7068944266405786497, guid: df17769e7a3d8134d8ac027e1df9461e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1867,6 +1877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Item_Gold
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068944266405786502, guid: df17769e7a3d8134d8ac027e1df9461e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df17769e7a3d8134d8ac027e1df9461e, type: 3}
@@ -2042,7 +2057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : XXX'
+  m_text: 'Gold : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2285,6 +2300,52 @@ Transform:
   m_Father: {fileID: 1349007866}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1746006812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746006813}
+  - component: {fileID: 1746006814}
+  m_Layer: 6
+  m_Name: Physics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1746006813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746006812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1850274032}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1746006814
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746006812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1763412628
 GameObject:
   m_ObjectHideFlags: 3
@@ -2518,6 +2579,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 863578698}
+  - {fileID: 1746006813}
   m_Father: {fileID: 1349007866}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2542,6 +2604,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792663629}
     m_Modifications:
+    - target: {fileID: 5807341548557711609, guid: 0c807365b9687b644a173a505dba58bb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5807341548557711611, guid: 0c807365b9687b644a173a505dba58bb,
         type: 3}
       propertyPath: m_Name
@@ -2601,6 +2668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700284095180167991, guid: 0c807365b9687b644a173a505dba58bb,
+        type: 3}
+      propertyPath: _healvalue
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c807365b9687b644a173a505dba58bb, type: 3}
