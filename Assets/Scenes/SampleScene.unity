@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 27752333}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f72b57696a4fd44686ee9ab3191a519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dmg: 10
 --- !u!95 &58043778
 Animator:
   serializedVersion: 4
@@ -700,7 +701,7 @@ GameObject:
   - component: {fileID: 395592696}
   m_Layer: 0
   m_Name: BreakableCube
-  m_TagString: Untagged
+  m_TagString: breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1373,6 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f72b57696a4fd44686ee9ab3191a519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dmg: 10
 --- !u!1 &1044316933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcca2186ac283d449a0bab40d85dce73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sword: {fileID: 863578697}
   _onAttack: {fileID: -562922476121499052, guid: 7465c15ff2f50e14295da1356a60d5be,
     type: 3}
 --- !u!1001 &1576631183
@@ -2543,6 +2546,7 @@ MonoBehaviour:
   _animator: {fileID: 1794143068}
   _move: {fileID: 7317242067884208208, guid: 7465c15ff2f50e14295da1356a60d5be, type: 3}
   _attack: {fileID: -562922476121499052, guid: 7465c15ff2f50e14295da1356a60d5be, type: 3}
+  _entity: {fileID: 1349007869}
 --- !u!95 &1794143068 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598,

@@ -47,12 +47,14 @@ public class EntityHealth : MonoBehaviour
 
     public void TakeDamage(int v)
     {
+        Debug.Log(_currentHealth);
         _currentHealth -= v;
-        if (_currentHealth < 0)
+        if (_currentHealth <= 0)
         {
             _currentHealth = 0;
+            Destroy(gameObject);
         }
-        HealthChanged.Invoke(_currentHealth);
+        HealthChanged?.Invoke(_currentHealth);
         TakeDmg.Invoke();
     }
 
