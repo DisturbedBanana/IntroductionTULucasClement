@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
+    [SerializeField] AnimatorBinding animatorBinding;
     [SerializeField] InputActionReference _move;
     [SerializeField] float _speed;
 
@@ -82,6 +83,7 @@ public class PlayerMove : MonoBehaviour
     {
         JoystickDirection = obj.ReadValue<Vector2>();
         MovementRoutine = StartCoroutine(MoveRoutine());
+        
     }
 
     private void UpdateMove(InputAction.CallbackContext obj)

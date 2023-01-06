@@ -915,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7499bffe1014f1543b146684ba24ef84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _entityGold: {fileID: 1349007870}
 --- !u!1001 &599547463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1644,7 +1645,7 @@ GameObject:
   - component: {fileID: 1349007870}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1695,6 +1696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0044933cf80b46e48ac040575b9e94c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorBinding: {fileID: 1794143067}
   _move: {fileID: 7317242067884208208, guid: 7465c15ff2f50e14295da1356a60d5be, type: 3}
   _speed: 10
   _onEvent:
@@ -1741,7 +1743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 7465c15ff2f50e14295da1356a60d5be,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -1783,6 +1785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfec9e5ecc7c75548a28c3249edc0e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _totalGold: 0
 --- !u!114 &1349007871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +1798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcca2186ac283d449a0bab40d85dce73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onAttack: {fileID: -562922476121499052, guid: 7465c15ff2f50e14295da1356a60d5be,
+    type: 3}
 --- !u!1001 &1576631183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2473,6 +2478,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146f949b2997a444ebf55082568c8448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1794143068}
+  _move: {fileID: -1680190386980627800, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+--- !u!95 &1794143068 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9036980633323257398, guid: 2dfbb63c9cdf7504faf4ff26b0581598,
+    type: 3}
+  m_PrefabInstance: {fileID: 1794143064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850274031
 GameObject:
   m_ObjectHideFlags: 0
