@@ -9,6 +9,7 @@ public class EntityHealth : MonoBehaviour
     [SerializeField] int _maxHealth;
     
     public event Action<int> HealthChanged;
+    public event Action TakeDmg;
 
     private int _currentHealth;
 
@@ -46,6 +47,7 @@ public class EntityHealth : MonoBehaviour
             _currentHealth = 0;
         }
         HealthChanged.Invoke(_currentHealth);
+        TakeDmg.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)
